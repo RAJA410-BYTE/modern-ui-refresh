@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import AboutSection from '@/components/AboutSection';
+import FeaturesSection from '@/components/FeaturesSection';
+import CTAStrip from '@/components/CTAStrip';
+import Testimonials from '@/components/Testimonials';
+import BlogSection from '@/components/BlogSection';
+import Footer from '@/components/Footer';
+
+// Import images
+import heroImage from '@/assets/hero-logistics.jpg';
+import aboutImage from '@/assets/about-ship.jpg';
+import featureImage from '@/assets/feature-delivery.jpg';
+import blogWarehouse from '@/assets/blog-warehouse.jpg';
+import blogAi from '@/assets/blog-ai.jpg';
+import blogTrends from '@/assets/blog-trends.jpg';
 
 const Index = () => {
+  const blogImages = [blogWarehouse, blogAi, blogTrends];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <Hero heroImage={heroImage} />
+      <AboutSection aboutImage={aboutImage} />
+      <FeaturesSection featureImage={featureImage} />
+      <CTAStrip />
+      <Testimonials />
+      <BlogSection blogImages={blogImages} />
+      <Footer />
     </div>
   );
 };
