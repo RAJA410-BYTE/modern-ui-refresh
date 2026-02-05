@@ -30,15 +30,14 @@ const Hero = ({
           animationDelay: '0.2s'
         }}>Star Logistics.
 
-          <span className="block text-primary">Transportation</span>
+          <span className="block text-primary text-5xl">#1 Transporter in NorthEast</span>
           </h1>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl opacity-0 animate-fade-up" style={{
           animationDelay: '0.4s'
         }}>
-            Move your goods safely and efficiently across India. 
-            Book a truck in minutes with real-time tracking and competitive pricing.
+            Move your goods safely and efficiently across India. Book a truck in minutes with reliability and competitive pricing.
           </p>
 
           {/* CTA Buttons */}
