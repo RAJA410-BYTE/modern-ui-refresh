@@ -1,4 +1,4 @@
-import { Truck, Package, Globe, HeadphonesIcon } from 'lucide-react';
+import { Truck, Package, Clock, Shield } from 'lucide-react';
 
 interface FeaturesSectionProps {
   featureImage: string;
@@ -9,26 +9,26 @@ const FeaturesSection = ({ featureImage }: FeaturesSectionProps) => {
     {
       number: '01',
       icon: Truck,
-      title: 'Logistic Solution',
-      description: 'Complete end-to-end logistics management with real-time tracking and optimization.',
+      title: 'Full Truck Load',
+      description: 'Dedicated trucks for your large shipments. Ideal for bulk goods and faster transit times.',
     },
     {
       number: '02',
       icon: Package,
-      title: 'Warehouse Storage',
-      description: 'Secure, climate-controlled storage facilities across major global locations.',
+      title: 'Part Truck Load',
+      description: 'Share truck space for smaller loads. Cost-effective solution for medium-sized shipments.',
     },
     {
       number: '03',
-      icon: Globe,
-      title: 'Global Transport',
-      description: 'International shipping via air, sea, and land to over 150 countries worldwide.',
+      icon: Clock,
+      title: 'Express Delivery',
+      description: 'Time-critical shipments with priority handling and expedited transit across India.',
     },
     {
       number: '04',
-      icon: HeadphonesIcon,
-      title: '24/7 Support',
-      description: 'Round-the-clock customer service with dedicated account managers for your business.',
+      icon: Shield,
+      title: 'Secure Transport',
+      description: 'GPS-enabled trucks with comprehensive insurance for your valuable cargo.',
     },
   ];
 
@@ -39,7 +39,7 @@ const FeaturesSection = ({ featureImage }: FeaturesSectionProps) => {
         <div className="relative h-[400px] lg:h-auto">
           <img
             src={featureImage}
-            alt="Delivery service"
+            alt="Truck transportation service"
             className="w-full h-full object-cover"
           />
         </div>
@@ -48,7 +48,7 @@ const FeaturesSection = ({ featureImage }: FeaturesSectionProps) => {
         <div className="bg-dark text-white py-16 lg:py-24 px-8 lg:px-16">
           <span className="section-label mb-4 block">Our Services</span>
           <h2 className="section-title text-white mb-12">
-            We give you complete control of your shipments.
+            Complete control over your truck shipments.
           </h2>
 
           {/* Feature Cards Grid */}

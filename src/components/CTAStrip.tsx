@@ -1,28 +1,38 @@
-import { ArrowRight } from 'lucide-react';
+import { Truck, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTAStrip = () => {
   return (
-    <section className="bg-gradient-primary py-16">
+    <section className="bg-gradient-primary py-12 lg:py-16">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Content */}
-          <div className="text-center md:text-left">
+          <div className="text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-2">
-              Need Help? Get Free Quote!
+              Need a Truck? Book Now!
             </h2>
             <p className="text-white/80 text-lg">
-              Contact us today for a personalized logistics solution tailored to your needs.
+              Get instant quotes and book your truck in minutes.
             </p>
           </div>
 
-          {/* CTA Button */}
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 bg-white text-foreground px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group"
-          >
-            <span>Get Started</span>
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </a>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              to="/book-truck"
+              className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-semibold transition-all hover:shadow-xl hover:-translate-y-0.5"
+            >
+              <Truck className="w-5 h-5" />
+              Book a Truck
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <a
+              href="tel:+917002066616"
+              className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold transition-all hover:bg-white hover:text-primary"
+            >
+              Call Us Now
+            </a>
+          </div>
         </div>
       </div>
     </section>

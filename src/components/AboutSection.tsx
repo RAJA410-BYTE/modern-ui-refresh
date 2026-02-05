@@ -1,4 +1,5 @@
 import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface AboutSectionProps {
   aboutImage: string;
@@ -6,10 +7,10 @@ interface AboutSectionProps {
 
 const AboutSection = ({ aboutImage }: AboutSectionProps) => {
   const features = [
-    'Worldwide shipping coverage',
-    'Real-time tracking system',
+    'Pan-India truck network',
+    'Real-time GPS tracking',
     '24/7 customer support',
-    'Secure & insured delivery',
+    'Secure & insured transport',
   ];
 
   return (
@@ -21,14 +22,14 @@ const AboutSection = ({ aboutImage }: AboutSectionProps) => {
             <div className="relative overflow-hidden rounded-3xl shadow-2xl group">
               <img
                 src={aboutImage}
-                alt="Container ship at sea"
+                alt="Star Logistics truck fleet"
                 className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             {/* Floating Stats Card */}
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-8 rounded-2xl shadow-xl">
-              <div className="text-5xl font-heading font-bold">25+</div>
-              <div className="text-sm mt-1 opacity-90">Years Experience</div>
+              <div className="text-5xl font-heading font-bold">150+</div>
+              <div className="text-sm mt-1 opacity-90">Trucks in Fleet</div>
             </div>
           </div>
 
@@ -36,13 +37,13 @@ const AboutSection = ({ aboutImage }: AboutSectionProps) => {
           <div>
             <span className="section-label mb-4 block">About Us</span>
             <h2 className="section-title text-foreground mb-6">
-              A professional transportation & logistics company
+              A professional truck transportation company
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              We are a global logistics company providing innovative transport solutions 
-              for businesses of all sizes. With over 25 years of industry experience, 
-              we've built a reputation for reliability, efficiency, and exceptional 
-              customer service across the globe.
+              Star Logistics is a leading truck transportation company providing reliable 
+              and efficient goods movement across India. With a fleet of over 150 
+              well-maintained trucks and experienced drivers, we ensure your cargo 
+              reaches its destination safely and on time.
             </p>
 
             {/* Features List */}
@@ -55,9 +56,9 @@ const AboutSection = ({ aboutImage }: AboutSectionProps) => {
               ))}
             </div>
 
-            <a href="#services" className="btn-primary">
+            <Link to="/about" className="btn-primary">
               Learn More About Us
-            </a>
+            </Link>
           </div>
         </div>
       </div>
