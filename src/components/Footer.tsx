@@ -1,20 +1,22 @@
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'About Us', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+    { label: 'Fleet', href: '/fleet' },
+    { label: 'Book Truck', href: '/book-truck' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const services = [
-    'Air Freight',
-    'Sea Freight',
-    'Road Transport',
-    'Warehousing',
-    'Supply Chain',
+    'Full Truck Load',
+    'Part Truck Load',
+    'Express Delivery',
+    'Interstate Logistics',
+    'Secure Transport',
   ];
 
   const socialLinks = [
@@ -25,18 +27,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="bg-dark-soft text-white">
+    <footer className="bg-dark-soft text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-1 mb-6">
-              <span className="text-2xl font-heading font-bold">LOGISTICO</span>
+              <span className="text-2xl font-heading font-bold">STAR LOGISTICS</span>
               <span className="text-primary text-3xl font-bold">.</span>
             </div>
             <p className="text-white/60 leading-relaxed mb-6">
-              Your trusted partner in global logistics. We deliver excellence 
-              across air, sea, and land transportation services.
+              Your trusted partner in truck transportation. We deliver goods 
+              safely and efficiently across India with our modern fleet.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -57,13 +59,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-white/60 hover:text-primary transition-colors inline-flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -75,47 +77,44 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <a
-                    href="#services"
+                  <Link
+                    to="/services"
                     className="text-white/60 hover:text-primary transition-colors inline-flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact & Newsletter */}
           <div>
-            <h3 className="font-heading font-bold text-lg mb-6">Newsletter</h3>
+            <h3 className="font-heading font-bold text-lg mb-6">Get a Quote</h3>
             <p className="text-white/60 mb-4">
-              Subscribe to get the latest news and updates.
+              Need a truck? Contact us for instant quotes.
             </p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-4 py-3 rounded-full bg-white text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:shadow-[var(--shadow-button)] transition-all"
-              >
-                <Mail className="w-5 h-5" />
-              </button>
-            </form>
+            <Link
+              to="/book-truck"
+              className="inline-block bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all mb-6"
+            >
+              Book a Truck
+            </Link>
 
             {/* Contact Info */}
-            <div className="mt-8 space-y-3">
+            <div className="space-y-3">
               <div className="flex items-center gap-3 text-white/60">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>123 Business Ave, New York, NY 10001</span>
+                <span>123 Transport Hub, Guwahati, Assam</span>
               </div>
               <div className="flex items-center gap-3 text-white/60">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>+1 234 567 890</span>
+                <span>+91 7002066616</span>
+              </div>
+              <div className="flex items-center gap-3 text-white/60">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <span>info@starlogistics.com</span>
               </div>
             </div>
           </div>
@@ -127,7 +126,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/40 text-sm">
-              © 2026 Logistico. All rights reserved.
+              © 2026 Star Logistics. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-white/40 hover:text-white transition-colors">

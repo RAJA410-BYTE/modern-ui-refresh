@@ -3,21 +3,21 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechCorp',
-      content: 'Logistico transformed our supply chain operations. Their real-time tracking and dedicated support have made shipping stress-free.',
+      name: 'Rajesh Kumar',
+      role: 'Operations Head, ABC Industries',
+      content: 'Star Logistics has transformed our supply chain. Their trucks are always on time and the real-time tracking gives us complete visibility.',
       rating: 5,
     },
     {
-      name: 'Michael Chen',
-      role: 'Operations Manager, GlobalRetail',
-      content: 'We\'ve been working with Logistico for 5 years. Their reliability and global reach are unmatched in the industry.',
+      name: 'Priya Sharma',
+      role: 'Business Owner, Sharma Enterprises',
+      content: 'We\'ve been using Star Logistics for 2 years. Their professional drivers and well-maintained trucks ensure our goods reach safely every time.',
       rating: 5,
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Founder, E-Commerce Plus',
-      content: 'From warehousing to last-mile delivery, Logistico handles everything. Our customers love the fast shipping times.',
+      name: 'Mohammed Ali',
+      role: 'Logistics Manager, XYZ Traders',
+      content: 'The booking process is so simple and transparent. No hidden charges, competitive pricing, and excellent customer support.',
       rating: 5,
     },
   ];
